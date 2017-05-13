@@ -92,23 +92,19 @@ int solve (int row, int col)
 int main (int argc, char * argv[])
 {
     //Object of File handling
-	ifstream inFile;
+    ifstream inFile;
     ofstream outFile,outFile1;
-    string name;
     //Showing Usage
     if (argc <= 2 || argc > 3)
     {
         cerr << "Error : Usage : " << argv[0] << " <InputFilename> <OutputFilename>" << endl;
         return 0;
     }
-    cout << "Enter Player Name : ";
-    getline(cin,name);
     cout << "\n\t\t---------- WELCOME TO SUDOKU ----------\n" ;
-    cout<< "\n\tPlayer Name : " << name <<endl;
     cout<< "\tPlayer ID : 01" <<endl;
     cout<< "\tSudoku To Be Solved : <"<< argv[1] <<"> "<<endl;
     //Open file
-	inputFile(argv[1], inFile);
+    inputFile(argv[1], inFile);
     //Input matrix
 	for (int row = 0; row < ROWS; row++)
 	{
@@ -118,7 +114,7 @@ int main (int argc, char * argv[])
 		}
 	}
     //closing file
-	 inFile.close();
+     inFile.close();
      outputFile (argv[2],outFile1);
      outFile1 <<"Input File is <"<< argv[1]<<">"<< endl;
      outFile1 <<"\nSudoku to be Solved is:"<<endl<<endl;
